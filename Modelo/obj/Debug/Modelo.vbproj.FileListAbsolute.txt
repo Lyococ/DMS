@@ -1,0 +1,10 @@
+C:\Proyectos Personales\DMS\Modelo\bin\Debug\Modelo.dll
+C:\Proyectos Personales\DMS\Modelo\bin\Debug\Modelo.pdb
+C:\Proyectos Personales\DMS\Modelo\bin\Debug\Modelo.xml
+C:\Proyectos Personales\DMS\Modelo\obj\Debug\Modelo.vbproj.AssemblyReference.cache
+C:\Proyectos Personales\DMS\Modelo\obj\Debug\Modelo.Resources.resources
+C:\Proyectos Personales\DMS\Modelo\obj\Debug\Modelo.vbproj.GenerateResource.cache
+C:\Proyectos Personales\DMS\Modelo\obj\Debug\Modelo.vbproj.CoreCompileInputs.cache
+C:\Proyectos Personales\DMS\Modelo\obj\Debug\Modelo.dll
+C:\Proyectos Personales\DMS\Modelo\obj\Debug\Modelo.xml
+C:\Proyectos Personales\DMS\Modelo\obj\Debug\Modelo.pdb
