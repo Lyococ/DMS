@@ -206,7 +206,7 @@
                 <td>&nbsp;</td>
             </tr>
         </table>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="600px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="800px" >
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="ID" />
                 <asp:BoundField DataField="Name" HeaderText="NOMBRE USUARIO" />

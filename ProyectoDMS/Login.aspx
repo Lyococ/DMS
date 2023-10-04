@@ -160,7 +160,7 @@
             <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="Entrar" />
+                    <asp:Button ID="Button1" runat="server" Text="Entrar" OnClick="Button1_Click" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
