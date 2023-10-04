@@ -5,7 +5,7 @@ Public Class Conexiones
     Public Shared Validar As String = "0"
 
     Public Shared Sub AbrirConexion()
-        Cnn = New SqlConnection("Server=DESKTOP-JRKLD0V\SQLEXPRESS;DataBase=DMS;User Id=UserDMS;Password=Colombia123")
+        Cnn = New SqlConnection("Server=usafiliaciones.database.windows.net;DataBase=DMS;User Id=lyoco;Password=C0dely0c0*.1")
     End Sub
 
 End Class

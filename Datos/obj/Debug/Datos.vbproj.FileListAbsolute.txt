@@ -36,3 +36,22 @@ C:\Proyectos Personales\PruebaDMS\Datos\obj\Debug\Datos.vbproj.CopyComplete
 C:\Proyectos Personales\PruebaDMS\Datos\obj\Debug\Datos.dll
 C:\Proyectos Personales\PruebaDMS\Datos\obj\Debug\Datos.xml
 C:\Proyectos Personales\PruebaDMS\Datos\obj\Debug\Datos.pdb
+C:\Des\DMS\Datos\bin\Debug\Datos.dll.config
+C:\Des\DMS\Datos\bin\Debug\Datos.dll
+C:\Des\DMS\Datos\bin\Debug\Datos.pdb
+C:\Des\DMS\Datos\bin\Debug\Datos.xml
+C:\Des\DMS\Datos\bin\Debug\EntityFramework.dll
+C:\Des\DMS\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Des\DMS\Datos\bin\Debug\Modelo.dll
+C:\Des\DMS\Datos\bin\Debug\Modelo.pdb
+C:\Des\DMS\Datos\bin\Debug\Modelo.xml
+C:\Des\DMS\Datos\bin\Debug\EntityFramework.xml
+C:\Des\DMS\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Des\DMS\Datos\obj\Debug\Datos.vbproj.AssemblyReference.cache
+C:\Des\DMS\Datos\obj\Debug\Datos.Resources.resources
+C:\Des\DMS\Datos\obj\Debug\Datos.vbproj.GenerateResource.cache
+C:\Des\DMS\Datos\obj\Debug\Datos.vbproj.CoreCompileInputs.cache
+C:\Des\DMS\Datos\obj\Debug\Datos.vbproj.CopyComplete
+C:\Des\DMS\Datos\obj\Debug\Datos.dll
+C:\Des\DMS\Datos\obj\Debug\Datos.xml
+C:\Des\DMS\Datos\obj\Debug\Datos.pdb

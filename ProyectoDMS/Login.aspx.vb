@@ -1,17 +1,23 @@
-﻿Imports Datos
+﻿Imports System.Globalization
+Imports Datos
 
 Public Class Login
     Inherits System.Web.UI.Page
+
+    Dim objSimpleDes As New Simple3Des(Encryption.strKey)
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
 
-    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Protected Sub Conexion(sender As Object, e As EventArgs) Handles Button1.Click
         Conexiones.AbrirConexion()
         Conexiones.Cnn.Open()
 
-        Dim da As New SqlClient.SqlDataAdapter("Select *from DataUser where Email ='" & txtEmail.Text & "' and Password = '" & txtEmail.Text & "'", Conexiones.Cnn)
+        Dim da As New SqlClient.
+            SqlDataAdapter("Select *from DataUser where Email ='" &
+            txtEmail.Text & "' and Password = '" &
+            objSimpleDes.Encrypt(txtClave.Text) & "'", Conexiones.Cnn)
         Dim ds As New DataSet
         da.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -32,8 +38,16 @@ Public Class Login
             aCookie.Value = "Activa"
             aCookie.Expires = FechaHora
             Response.Cookies.Add(aCookie)
-        Else
+        End If
+    End Sub
 
+    Private Sub CifratePassword()
+        Dim FechaHora As String = Now.AddMinutes(3)
+        If Request.Cookies("EmpleadoASP") Is Nothing Then
+            Dim aCookie As New HttpCookie("EmpleadoASP")
+            aCookie.Value = "Activa"
+            aCookie.Expires = FechaHora
+            Response.Cookies.Add(aCookie)
         End If
     End Sub
 End Class
