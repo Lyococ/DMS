@@ -1,6 +1,5 @@
 ﻿
 Imports System.Security.Cryptography
-Imports System.Text
 Public Class Simple3Des
 
     Private tdDes As New TripleDESCryptoServiceProvider

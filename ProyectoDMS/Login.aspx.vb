@@ -7,7 +7,20 @@ Public Class Login
     Dim objSimpleDes As New Simple3Des(Encryption.strKey)
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Conexiones.AbrirConexion()
+        Conexiones.Cnn.Open()
 
+        Dim da As New SqlClient.
+            SqlDataAdapter("select *from [dbo].[Profiles]", Conexiones.Cnn)
+
+        Dim ds As New DataSet
+        da.Fill(ds)
+        Conexiones.Cnn.Close()
+
+        ListPerfil.DataSource = ds.Tables(0)
+        ListPerfil.DataTextField = "Profile"
+        ListPerfil.DataValueField = "Id"
+        ListPerfil.DataBind()
     End Sub
 
     Protected Sub Conexion(sender As Object, e As EventArgs) Handles Button1.Click
@@ -18,12 +31,13 @@ Public Class Login
             SqlDataAdapter("Select *from DataUser where Email ='" &
             txtEmail.Text & "' and Password = '" &
             objSimpleDes.Encrypt(txtClave.Text) & "'", Conexiones.Cnn)
+
         Dim ds As New DataSet
         da.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
-            CreateCookies()
-            Response.Redirect("~/DetalleTareas.aspx")
-
+            'TODO: Arreglar sacar el id de perfil ds.Tables(0).Rows
+            SessionData(123)
+            Response.Redirect("~/Default.aspx")
         Else
             MsgBox("Datos de usuario invalido, favor revisar!!", vbCritical, "Login Error")
         End If
@@ -31,13 +45,15 @@ Public Class Login
         Conexiones.Cnn.Close()
     End Sub
 
-    Private Sub CreateCookies()
+    Private Sub SessionData(id As Integer)
         Dim FechaHora As String = Now.AddMinutes(3)
         If Request.Cookies("EmpleadoASP") Is Nothing Then
             Dim aCookie As New HttpCookie("EmpleadoASP")
             aCookie.Value = "Activa"
             aCookie.Expires = FechaHora
             Response.Cookies.Add(aCookie)
+
+            HttpContext.Current.Session("idProfile") = id
         End If
     End Sub
 

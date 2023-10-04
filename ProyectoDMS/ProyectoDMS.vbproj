@@ -211,6 +211,7 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Common\Encryption.vb" />
+    <Compile Include="Common\LoadController.vb" />
     <Compile Include="Common\Simple3Des.vb" />
     <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>

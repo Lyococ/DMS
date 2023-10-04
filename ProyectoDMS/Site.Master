@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+    <title><%: Page.Title %> - Pruebas</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -15,6 +15,7 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <a href="About.aspx">About.aspx</a>
 
 </head>
 <body>
@@ -46,10 +47,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>
+                    <ul id="menu" class="navbar-nav flex-grow-1" runat="server">
+                       <%-- <li class="nav-item"><a class="nav-link" runat="server" href="~/DetalleTareas">Detalles</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/EstadoTareas">Estado de tarea</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>--%>
                     </ul>
                 </div>
             </div>
@@ -61,6 +62,7 @@
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
             </footer>
+            <a href="EstadoTareas.aspx">EstadoTareas.aspx</a>
         </div>
     </form>
     <asp:PlaceHolder runat="server">
