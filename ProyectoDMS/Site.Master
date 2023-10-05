@@ -47,10 +47,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul id="menu" class="navbar-nav flex-grow-1" runat="server">
-                       <%-- <li class="nav-item"><a class="nav-link" runat="server" href="~/DetalleTareas">Detalles</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/EstadoTareas">Estado de tarea</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>--%>
+                    <ul id="menu" class="navbar-nav flex-grow-1" runat="server">                      
                     </ul>
                 </div>
             </div>

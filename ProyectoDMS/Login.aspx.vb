@@ -36,7 +36,7 @@ Public Class Login
         da.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
             'TODO: Arreglar sacar el id de perfil ds.Tables(0).Rows
-            SessionData(123)
+            SessionData(ds.Tables(0).Rows(0).ItemArray(5))
             Response.Redirect("~/Default.aspx")
         Else
             MsgBox("Datos de usuario invalido, favor revisar!!", vbCritical, "Login Error")
@@ -45,16 +45,16 @@ Public Class Login
         Conexiones.Cnn.Close()
     End Sub
 
-    Private Sub SessionData(id As Integer)
+    Private Sub SessionData(id As Guid)
         Dim FechaHora As String = Now.AddMinutes(3)
         If Request.Cookies("EmpleadoASP") Is Nothing Then
             Dim aCookie As New HttpCookie("EmpleadoASP")
             aCookie.Value = "Activa"
             aCookie.Expires = FechaHora
             Response.Cookies.Add(aCookie)
-
-            HttpContext.Current.Session("idProfile") = id
         End If
+
+        HttpContext.Current.Session("idProfile") = id
     End Sub
 
     Private Sub CifratePassword()
